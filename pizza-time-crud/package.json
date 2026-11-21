@@ -1,0 +1,13 @@
+{
+  "name": "pizza-time-crud",
+  "version": "1.0.0",
+  "description": "CRUD web sencillo para gestionar el menú de la pizzería Pizza Time (Node.js sin dependencias).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

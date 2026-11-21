@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pizza Time | Gestión del menú</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>🍕 Pizza Time</h1>
+    <p>Gestión del menú de la pizzería</p>
+  </header>
+
+  <main class="contenedor">
+
+    <!-- ========== FORMULARIO: sirve para CREAR y para EDITAR ========== -->
+    <section class="tarjeta" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Agregar pizza</h2>
+
+      <form id="form-pizza" novalidate>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" maxlength="40" placeholder="Ej: Cuatro quesos" required>
+
+        <label for="ingredientes">Ingredientes</label>
+        <textarea id="ingredientes" rows="3" maxlength="120" placeholder="Ej: Mozzarella, parmesano, gorgonzola" required></textarea>
+
+        <div class="fila">
+          <div>
+            <label for="tamano">Tamaño</label>
+            <select id="tamano" required>
+              <option value="Personal">Personal</option>
+              <option value="Mediana" selected>Mediana</option>
+              <option value="Grande">Grande</option>
+            </select>
+          </div>
+          <div>
+            <label for="precio">Precio (COP)</label>
+            <input id="precio" type="number" min="1" step="500" placeholder="Ej: 32000" required>
+          </div>
+        </div>
+
+        <label class="casilla">
+          <input id="disponible" type="checkbox" checked>
+          Disponible hoy
+        </label>
+
+        <p id="error-formulario" class="error" role="alert" hidden></p>
+
+        <div class="botones">
+          <button id="boton-guardar" type="submit" class="boton principal">Agregar pizza</button>
+          <button id="boton-cancelar" type="button" class="boton secundario" hidden>Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ========== LISTA: aquí se LEEN las pizzas ========== -->
+    <section class="tarjeta" aria-labelledby="titulo-lista">
+      <div class="cabecera-lista">
+        <h2 id="titulo-lista">Menú actual</h2>
+        <span id="resumen" class="resumen"></span>
+      </div>
+
+      <input id="buscador" type="search" placeholder="Buscar por nombre o ingrediente..." aria-label="Buscar pizzas">
+
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>Pizza</th>
+              <th>Tamaño</th>
+              <th>Precio</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-pizzas"></tbody>
+        </table>
+      </div>
+      <p id="mensaje-vacio" class="vacio" hidden>No hay pizzas para mostrar.</p>
+    </section>
+
+  </main>
+
+  <div id="aviso" class="aviso" role="status" hidden></div>
+
+  <footer class="pie">Pizza Time · CRUD de práctica · Seminario de Gestión de Software Ágil asistido por IA</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
