@@ -2,7 +2,7 @@
 
 Aplicación web sencilla para administrar el menú de la pizzería **Pizza Time**: permite **crear, ver, editar y eliminar** pizzas. Fue desarrollada con ayuda de inteligencia artificial (Claude) como trabajo práctico del seminario *Gestión de Software Ágil asistido por Inteligencia Artificial*.
 
-🎥 **Video explicativo:** _(pega aquí el enlace del video)_
+🎥 **Video explicativo:** _(https://drive.google.com/file/d/1EeCLjpsKKShXf_9FUgHlaKinWghVY6xD/view?usp=drivesdk)_
 
 ---
 
@@ -187,4 +187,4 @@ Dame los comandos curl para probar cada operación del CRUD (incluyendo los erro
 
 ---
 
-**Autor:** _(escribe aquí tu nombre)_ · Seminario de Gestión de Software Ágil asistido por Inteligencia Artificial
+**Autor:** _(Andrey Mauricio Perdomo Trujillo)_ · Seminario de Gestión de Software Ágil asistido por Inteligencia Artificial
